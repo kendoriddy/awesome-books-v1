@@ -13,26 +13,45 @@ function errorMsg(message) {
   }, 2000);
 }
 
+// Display books function
 function showBooks(id, title, author) {
-    const items = document.createElement('div');
-    items.innerHTML = `
+  const items = document.createElement('div');
+  items.innerHTML = `
       <p>${title}</p>
       <p>${author}</p>
       `;
-    const removeBtn = document.createElement('button');
-    removeBtn.textContent = 'Remove';
-    removeBtn.id = id;
-    const itemLine = document.createElement('hr');
-    items.append(removeBtn, itemLine);
-    removeBtn.addEventListener('click', () => {
-      books = books.filter((book) => {
-        if (book.id === id) {
-          return false;
-        }
-        return true;
-      });
-      localStorage.setItem('books', JSON.stringify(books));
-      items.remove();
+  const removeBtn = document.createElement('button');
+  removeBtn.textContent = 'Remove';
+  removeBtn.id = id;
+  const itemLine = document.createElement('hr');
+  items.append(removeBtn, itemLine);
+  removeBtn.addEventListener('click', () => {
+    books = books.filter((book) => {
+      if (book.id === id) {
+        return false;
+      }
+      return true;
     });
-    list.appendChild(items);
+    localStorage.setItem('books', JSON.stringify(books));
+    items.remove();
+  });
+  list.appendChild(items);
+}
+
+// Add new book
+function addBook(title, author) {
+    const id = Date.now();
+    const bookEntry = {
+      id,
+      title,
+      author,
+    };
+  
+    if (title === '' || author === '') {
+      errorMsg('All fields are required');
+    } else {
+      books.push(bookEntry);
+      localStorage.setItem('books', JSON.stringify(books));
+      showBooks(bookEntry.id, bookEntry.title, bookEntry.author);
+    }
   }

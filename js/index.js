@@ -60,9 +60,7 @@ function addBook(title, author) {
 
   const bookEntry = {
     id,
-
     title,
-
     author,
   };
 

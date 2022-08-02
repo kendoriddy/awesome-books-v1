@@ -55,3 +55,25 @@ function addBook(title, author) {
       showBooks(bookEntry.id, bookEntry.title, bookEntry.author);
     }
   }
+
+  const myBook = JSON.parse(localStorage.getItem('books'));
+if (myBook) {
+  books = myBook;
+}
+books.forEach((book) => {
+  showBooks(book.id, book.title, book.author);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const title = document.getElementById('title');
+    const author = document.getElementById('author');
+    // if (title.value && author.value) {
+    addBook(title.value, author.value);
+
+    // clear input
+    title.value = '';
+    author.value = '';
+  });
+});

@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 const list = document.querySelector('.book-list');
 const form = document.getElementById('form');
 

@@ -18,6 +18,10 @@ body {
   left: 0;
 }
 
+.container {
+  margin: 5vw;
+}
+
 .inputField {
   display: flex;
   flex-direction: column;
@@ -25,13 +29,21 @@ body {
   border: 2px solid;
 }
 
-.btn {
-  width: 70px;
+.btn,
+.remove-btn {
   padding: 2.5px;
   box-shadow: 3px 3px;
   background-color: #fff;
-  margin-left: 185px;
   cursor: pointer;
+}
+
+.submit-btn {
+  width: 70px;
+  margin-left: calc(100% - 70px);
+}
+
+.remove-btn {
+    cursor: pointer;
 }
 
 .border-class {
@@ -44,26 +56,21 @@ body {
   justify-content: flex-end;
 }
 
-.li li {
-  padding-right: 10px;
+li {
   list-style: none;
-  border-right: 2px solid #000;
   line-height: 2.5;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.li li:last-child {
+li:last-child {
   border-right: none;
   padding-right: 0;
 }
 
-.li li a {
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.li:nth-child(odd) {
-  background-color: #ccc;
+li:nth-child(odd) {
+  background-color: rgb(138, 134, 134);
 }
 
 .title-author {
@@ -72,13 +79,13 @@ body {
 }
 
 #title {
-  width: 250px;
+  width: 100%;
   padding: 5px;
   border: 2.5px solid;
 }
 
 #author {
-  width: 250px;
+  width: 100%;
   padding: 5px;
   border: 2.5px solid;
 }
@@ -86,5 +93,22 @@ body {
 .form-div {
   display: block;
   text-align: center;
-  margin-top: 60px;
+}
+
+.add-book {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.app-title {
+  text-align: center;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.book-list {
+  border: 2px solid #000;
 }

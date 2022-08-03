@@ -60,7 +60,7 @@ function showBooks(title, author, id) {
   removeBtn.className = 'remove-btn';
   items.append(removeBtn);
   bookList.appendChild(items);
-  
+
   removeBtn.addEventListener('click', () => {
     const book = new Book(title, author, id);
     id = removeBtn.id;

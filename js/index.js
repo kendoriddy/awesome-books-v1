@@ -1,105 +1,93 @@
-const list = document.querySelector('.book-list');
-const form = document.getElementById('form');
+let books = JSON.parse(localStorage.getItem('books'));
 
-// Initializing books
-let books = [];
-
-// Error Message
+//  Error Message
 function errorMsg(message) {
   document.querySelector('.warning').textContent = message;
-
   setTimeout(() => {
     document.querySelector('.warning').textContent = '';
   }, 2000);
 }
 
-// Display books function
-function showBooks(id, title, author) {
-  const items = document.createElement('div');
+class Book {
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
 
-  items.innerHTML = `
+  addBook() {
+    const { title, author, id } = this;
+    const bookList = { title, author, id };
+    books = JSON.parse(localStorage.getItem('books'));
+    if (title === '' || author === '') {
+      errorMsg('All fields are required');
+    } else if (books !== null) {
+      books.push(bookList);
+      localStorage.setItem('books', JSON.stringify(books));
+      books = JSON.parse(localStorage.getItem('books'));
+    } else {
+      books = [];
+      books.push(bookList);
+      localStorage.setItem('books', JSON.stringify(books));
+      books = JSON.parse(localStorage.getItem('books'));
+    }
+  }
 
-<p>${title}</p>
-
-<p>${author}</p>
-
-`;
-
-  const removeBtn = document.createElement('button');
-
-  removeBtn.textContent = 'Remove';
-
-  removeBtn.id = id;
-
-  const itemLine = document.createElement('hr');
-
-  items.append(removeBtn, itemLine);
-
-  removeBtn.addEventListener('click', () => {
+  remove() {
+    const { id } = this;
     books = books.filter((book) => {
       if (book.id === id) {
         return false;
       }
-
       return true;
     });
 
     localStorage.setItem('books', JSON.stringify(books));
-
-    items.remove();
-  });
-
-  list.appendChild(items);
-}
-
-// Add new book
-
-function addBook(title, author) {
-  const id = Date.now();
-
-  const bookEntry = {
-    id,
-    title,
-    author,
-  };
-
-  if (title === '' || author === '') {
-    errorMsg('All fields are required');
-  } else {
-    books.push(bookEntry);
-
-    localStorage.setItem('books', JSON.stringify(books));
-
-    showBooks(bookEntry.id, bookEntry.title, bookEntry.author);
   }
 }
 
-const myBook = JSON.parse(localStorage.getItem('books'));
+// Display books
+function showBooks(title, author, id) {
+  const bookList = document.querySelector('.book-list');
+  const items = document.createElement('li');
+  items.innerHTML = `
+      <div class="item-list"><h3><q>${title}</q> by ${author}</h3></div>
+      `;
+  const removeBtn = document.createElement('button');
+  removeBtn.textContent = 'Remove';
+  removeBtn.className = 'remove-btn';
+  items.append(removeBtn);
+  bookList.appendChild(items);
 
-if (myBook) {
-  books = myBook;
+  removeBtn.addEventListener('click', () => {
+    const book = new Book(title, author, id);
+    id = removeBtn.id;
+    book.remove();
+    items.remove();
+  });
 }
 
-books.forEach((book) => {
-  showBooks(book.id, book.title, book.author);
-});
-
 document.addEventListener('DOMContentLoaded', () => {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  const form = document.getElementById('form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const id = Math.floor(Math.random() * 100);
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
 
-    const title = document.getElementById('title');
-
-    const author = document.getElementById('author');
-
-    // if (title.value && author.value) {
-
-    addBook(title.value, author.value);
-
-    // clear input
-
-    title.value = '';
-
-    author.value = '';
+    const book = new Book(title, author, id);
+    book.addBook();
+    if (title && author) {
+      showBooks(book.title, book.author, book.id);
+    }
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
   });
 });
+
+// Appending book to empty object
+if (books !== null) {
+  books.forEach((book) => {
+    showBooks(book.title, book.author, book.id);
+  });
+}

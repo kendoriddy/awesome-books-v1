@@ -8,7 +8,7 @@
 
 body {
   position: relative;
-  background: radial-gradient(rgb(210, 46, 21), transparent);
+  background-image: url(./assets/book-bg.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
@@ -16,4 +16,95 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.container {
+  margin: 5vw;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  margin: 7px;
+  border: 2px solid;
+}
+
+.btn,
+.remove-btn {
+  padding: 2.5px;
+  box-shadow: 3px 3px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 70px;
+  margin-left: calc(100% - 70px);
+}
+
+.border-class {
+  border: 3px solid #000;
+  margin: 20px;
+}
+
+.book-ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  list-style: none;
+  line-height: 2.5;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+li:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+li:nth-child(odd) {
+  background-color: rgb(138, 134, 134);
+}
+
+.title-author {
+  width: 95%;
+  float: left;
+}
+
+#title {
+  width: 100%;
+  padding: 5px;
+  border: 2.5px solid;
+}
+
+#author {
+  width: 100%;
+  padding: 5px;
+  border: 2.5px solid;
+}
+
+.form-div {
+  display: block;
+  text-align: center;
+}
+
+.add-book {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.app-title {
+  text-align: center;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.book-list {
+  border: 2px solid #000;
 }

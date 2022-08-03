@@ -32,4 +32,16 @@ class Book {
       books = JSON.parse(localStorage.getItem('books'));
     }
   }
+
+  remove() {
+    const { id } = this;
+    books = books.filter((book) => {
+      if (book.id === id) {
+        return false;
+      }
+      return true;
+    });
+
+    localStorage.setItem('books', JSON.stringify(books));
+  }
 }

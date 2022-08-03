@@ -70,26 +70,26 @@ function showBooks(title, author, id) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const id = Math.floor(Math.random() * 100);
-      const title = document.getElementById('title').value;
-      const author = document.getElementById('author').value;
+  const form = document.getElementById('form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const id = Math.floor(Math.random() * 100);
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
   
-      const book = new Book(title, author, id);
-      book.addBook();
-      if (title && author) {
-        showBooks(book.title, book.author, book.id);
-      }
-      document.getElementById('title').value = '';
-      document.getElementById('author').value = '';
-    });
-  });
-  
-  // Appending book to empty object
-  if (books !== null) {
-    books.forEach((book) => {
+    const book = new Book(title, author, id);
+    book.addBook();
+    if (title && author) {
       showBooks(book.title, book.author, book.id);
-    });
-  }
+    }
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
+  });
+});
+  
+// Appending book to empty object
+if (books !== null) {
+  books.forEach((book) => {
+    showBooks(book.title, book.author, book.id);
+  });
+}

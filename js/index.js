@@ -7,3 +7,4 @@ function errorMsg(message) {
     document.querySelector('.warning').textContent = '';
   }, 2000);
 }
+

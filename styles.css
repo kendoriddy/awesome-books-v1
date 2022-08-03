@@ -42,10 +42,6 @@ body {
   margin-left: calc(100% - 70px);
 }
 
-.remove-btn {
-    cursor: pointer;
-}
-
 .border-class {
   border: 3px solid #000;
   margin: 20px;

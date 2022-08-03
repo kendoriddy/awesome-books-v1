@@ -17,3 +17,89 @@ body {
   right: 0;
   left: 0;
 }
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  margin: 7px;
+  border: 2px solid;
+}
+
+.btn {
+  width: 70px;
+  padding: 2.5px;
+  box-shadow: 3px 3px;
+  background-color: #fff;
+  margin-left: 185px;
+  cursor: pointer;
+}
+
+.border-class {
+  border: 3px solid #000;
+  margin: 20px;
+}
+
+.book-ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.book-ul li {
+  padding-right: 10px;
+  list-style: none;
+  border-right: 2px solid #000;
+  line-height: 2.5;
+  cursor: pointer;
+}
+
+.book-ul li:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.book-ul li a {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.book-list {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.book-dynamic:nth-child(odd) {
+  background-color: #ccc;
+}
+
+.title-author {
+  width: 95%;
+  float: left;
+}
+
+#title {
+  width: 250px;
+  padding: 5px;
+  border: 2.5px solid;
+}
+
+#author {
+  width: 250px;
+  padding: 5px;
+  border: 2.5px solid;
+}
+
+.form-div-center {
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.header-book {
+  margin-top: 60px;
+}
+
+eader-title {
+  text-align: center;
+}

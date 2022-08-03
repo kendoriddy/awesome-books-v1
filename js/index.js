@@ -51,9 +51,7 @@ function showBooks(title, author, id) {
   const bookList = document.querySelector('.book-list');
   const items = document.createElement('li');
   items.innerHTML = `
-      <div class="item-list"><h3><q>${title}</q></h3>
-    <h3> by </h3>
-    <h3> ${author}</h3></div>
+      <div class="item-list"><h3><q>${title}</q> by ${author}</h3></div>
       `;
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'Remove';

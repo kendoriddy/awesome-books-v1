@@ -44,7 +44,7 @@ body {
   justify-content: flex-end;
 }
 
-.book-ul li {
+.li li {
   padding-right: 10px;
   list-style: none;
   border-right: 2px solid #000;
@@ -52,24 +52,17 @@ body {
   cursor: pointer;
 }
 
-.book-ul li:last-child {
+.li li:last-child {
   border-right: none;
   padding-right: 0;
 }
 
-.book-ul li a {
+.li li a {
   font-size: 20px;
   font-weight: 900;
 }
 
-.book-list {
-  display: flex;
-  align-items: center;
-  height: 2rem;
-  padding: 0.4rem 0.8rem;
-}
-
-.book-dynamic:nth-child(odd) {
+.li:nth-child(odd) {
   background-color: #ccc;
 }
 
@@ -90,16 +83,8 @@ body {
   border: 2.5px solid;
 }
 
-.form-div-center {
+.form-div {
   display: block;
   text-align: center;
   margin-top: 60px;
-}
-
-.header-book {
-  margin-top: 60px;
-}
-
-eader-title {
-  text-align: center;
 }

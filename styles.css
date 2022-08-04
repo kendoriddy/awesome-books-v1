@@ -22,6 +22,36 @@ body {
   margin: 5vw;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000;
+}
+
+.nav-container a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000;
+  margin-left: 15px;
+}
+
+.nav-container ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-container ul li {
+  padding: 5px;
+  border-right: 2px solid #000;
+}
+
+.nav-container ul li:last-child {
+  padding: 5px;
+  border-right: 0;
+}
+
 .inputField {
   display: flex;
   flex-direction: column;
@@ -52,7 +82,7 @@ body {
   justify-content: flex-end;
 }
 
-li {
+.book-list li {
   list-style: none;
   line-height: 2.5;
   display: flex;
@@ -60,12 +90,7 @@ li {
   padding: 10px;
 }
 
-li:last-child {
-  border-right: none;
-  padding-right: 0;
-}
-
-li:nth-child(odd) {
+.book-list li:nth-child(odd) {
   background-color: rgb(138, 134, 134);
 }
 
@@ -98,6 +123,7 @@ li:nth-child(odd) {
 
 .app-title {
   text-align: center;
+  padding-top: 50px;
 }
 
 .heading {

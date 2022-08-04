@@ -38,6 +38,7 @@ a {
   font-weight: bold;
   color: #000;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .nav-container ul {
@@ -48,6 +49,7 @@ a {
 .nav-container ul li {
   padding: 5px;
   border-right: 2px solid #000;
+  cursor: pointer;
 }
 
 .nav-container ul li:last-child {
@@ -95,6 +97,7 @@ a {
 
 .book-list li:nth-child(odd) {
   background-color: rgb(138, 134, 134);
+  color: rgb(30, 11, 243);
 }
 
 .title-author {
@@ -122,6 +125,14 @@ a {
 .add-book {
   margin-top: 30px;
   text-align: center;
+}
+
+#add-book {
+  display: none;
+}
+
+#contact {
+  display: none;
 }
 
 .app-title {

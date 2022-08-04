@@ -49,26 +49,17 @@ a {
   cursor: pointer;
 }
 
+.book-list li {
+  list-style: none;
+  line-height: 2.5;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
 .nav-container ul {
   list-style: none;
   display: flex;
-}
-
-.nav-container ul li {
-  padding: 5px;
-  border-right: 2px solid #000;
-  cursor: pointer;
-}
-
-.nav-container ul li:last-child {
-  padding: 5px;
-  border-right: 0;
-}
-
-.nav-links li:hover {
-  font-size: 24px;
-  background-color:  rgb(138, 134, 134);
-  transition: all 0.5s ease-in-out;
 }
 
 .inputField {
@@ -99,19 +90,6 @@ a {
 .book-ul {
   display: flex;
   justify-content: flex-end;
-}
-
-.book-list li {
-  list-style: none;
-  line-height: 2.5;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.book-list li:nth-child(odd) {
-  background-color: rgb(138, 134, 134);
-  color: beige;
 }
 
 .title-author {
@@ -172,10 +150,6 @@ a {
   margin-top: 10px;
 }
 
-.contact h2 {
-  text-align: center;
-}
-
 .contact li {
   font-size: 20px;
   font-weight: 400;
@@ -183,6 +157,7 @@ a {
 }
 
 .contact h2 {
+  text-align: center;
   color: #2a2a2a;
   font-size: 28px;
   font-weight: 600;
@@ -206,6 +181,28 @@ footer {
   width: 100vw;
   background-color: beige;
   padding: 10px 0;
+}
+
+.nav-container ul li {
+  padding: 5px;
+  border-right: 2px solid #000;
+  cursor: pointer;
+}
+
+.book-list li:nth-child(odd) {
+  background-color: rgb(138, 134, 134);
+  color: beige;
+}
+
+.nav-links li:hover {
+  font-size: 24px;
+  background-color: rgb(138, 134, 134);
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-container ul li:last-child {
+  padding: 5px;
+  border-right: 0;
 }
 
 .timeDisplay {

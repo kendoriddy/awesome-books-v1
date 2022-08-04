@@ -202,3 +202,8 @@ footer {
   background-color: beige;
   padding: 10px 0;
 }
+
+.timeDisplay {
+  float: right;
+}
+

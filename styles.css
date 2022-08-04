@@ -65,6 +65,12 @@ a {
   border-right: 0;
 }
 
+.nav-links li:hover {
+  font-size: 24px;
+  background-color:  rgb(138, 134, 134);
+  transition: all 0.5s ease-in-out;
+}
+
 .inputField {
   display: flex;
   flex-direction: column;
@@ -168,7 +174,6 @@ a {
 
 .contact h2 {
   text-align: center;
-
 }
 
 .contact li {
@@ -205,8 +210,4 @@ footer {
 
 .timeDisplay {
   float: right;
-}
-
-a:active {
-  background-color: yellow;
 }

@@ -24,10 +24,18 @@ a {
 }
 
 .container {
-  margin: 5vw;
+  margin: 0 5vw;
+}
+
+.header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .nav-container {
+  width: 100vw;
+  margin-left: -5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,7 +105,7 @@ a {
 
 .book-list li:nth-child(odd) {
   background-color: rgb(138, 134, 134);
-  color: rgb(30, 11, 243);
+  color: beige;
 }
 
 .title-author {
@@ -189,11 +197,8 @@ footer {
   text-align: center;
   position: fixed;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  left: 0;
   width: 100vw;
   background-color: beige;
-  margin-left: -40px;
   padding: 10px 0;
 }

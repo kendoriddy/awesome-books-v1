@@ -91,3 +91,22 @@ if (books !== null) {
     showBooks(book.title, book.author, book.id);
   });
 }
+
+// Handle page navigation
+
+function handlePageChange(e) {
+  const navLinks = document.getElementsByClassName('nav-link');
+  for (let i = 0; i < navLinks.length; i += 1) {
+    navLinks[i].style.color = '#343434';
+  }
+
+  if (e.target.classList.contains('list')) {
+    document.querySelector('#book-display').style.display = 'block';
+    document.querySelector('#add-book').style.display = 'none';
+    document.querySelector('#contact').style.display = 'none';
+  }
+}
+
+document.addEventListener('click', (e) => {
+  handlePageChange(e);
+});

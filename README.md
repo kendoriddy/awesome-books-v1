@@ -1,10 +1,10 @@
 # Awesome-books
 
-This project is focused on building  is a simple website that displays a list of books that users have added.It allows you to add and remove books from that list also. The goal of this project is to build a simple multipage page responsive book website.
+This website displays a list of books a users have added. It allows you to add and remove books from that list also. The goal of this project is to build a simple multipage page responsive book website.
 
-In this project, you are expected to setup Html-CSS-Javascript linter following the guildlines stated in the Html-CSS-Javascript limter config documentation, follow mobile first approach while building the website, make the website responsive on mobile and desktop, make website interactive, run tests and finally deploy.
+In this project, I setup Html-CSS-Javascript linter following the guildlines stated in the Html-CSS-Javascript limter config documentation of Microverse. I followed the mobile first approach while building the website, and the website is responsive and interactive on mobile and desktop.
 
-The project will contain the List, Add and Contact page.
+The project contains the List, Add and Contact page.
 
 ## Built With
 

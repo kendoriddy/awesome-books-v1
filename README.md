@@ -57,7 +57,7 @@ For tracking linters errors locally, you need to follow these steps:
 
 ## Autor 2
 **Ernest Lasten**
-- GitHub: [@githubhandle]
+- GitHub: [@githubhandle](https://github.com/Lasten-Ernest)
 - Twitter: [@twitterhandle]
 
 
